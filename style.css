@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap");
+    
+
+    /* Basic things */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background: rgb(10,188,249);
+        background: linear-gradient(315deg, rgba(10,188,249,1) 0%, rgba(44,105,209,1) 74%);
+        background-size: 400% 400%;
+        animation: gradient 20s ease-in infinite;
+      }
+      .headi{
+          font-weight: 600;
+      }
+      .cont {
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        color: black;
+        background: white;
+        border-radius: 0.5em;
+      }
+
+      /* Button */
+      .btn-m {
+        background-color: aliceblue;
+        color: #000;
+      }
+      .btn-m:hover {
+        background-color: #16C60C;
+      }
+
+
+      /* Text Area Select Shit */
+      textarea {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      /* GSAP ANIMATION */
+      .intro {
+        background-color: #000000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .slider {
+        background-color: #4f88ea;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(100%);
+      }
+      .intro-text {
+        color: #ffffff;
+        font-size: 2rem;
+      }
+      .hide {
+        background: black;
+        overflow: hidden;
+      }
+      .hide span {
+        transform: translateY(100%);
+        display: inline-block;
+      }
+
+
+      /* BACKGROUND ANIMATION */
+      @keyframes gradient{
+        0%{
+          background-position: 0% 50%;
+        }
+        50%{
+          background-position: 100% 50%;
+        }
+        100%{
+          background-position: 0% 50%;
+        }
+      }
