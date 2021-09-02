@@ -14,8 +14,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <title>Bootstrap 5</title>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    
   </head>
   <body>
     <!-- Main Body -->
@@ -34,24 +32,26 @@
 
 
       <!-- FORM -->
-      <form class="m-5">
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1" class="h4">Code here 👇</label>
-          <textarea
-            class="form-control text-white disable "
-            id="exampleFormControlTextarea1"
-            rows="10"
-            placeholder="Your Code"
-          ></textarea>
+      <form class="m-5" id="form">
+        <label for="custom-textarea" class="h4">Code here 👇</label>
+        <div class="custom-textarea-container">
+            <div class="custom-textarea form-control" tabindex="1" id="custom-textarea">
+                <span class="cursor d-none" id="cursor">|</span>
+            </div>
+            <textarea
+                class="textarea-hidden form-control"
+                id="textarea-hidden"
+                spellcheck="false"
+            ></textarea>
+        </div>
+        <br />
+        <!-- BUTTON -->
+        <div class="text-center">
+            <button class="btn btn-lg btn-primary btn-m mb-2" type="submit">
+                Submit ✅
+            </button>
         </div>
       </form>
-
-      <!-- BUTTON -->
-      <div class="text-center">
-        <button class="btn btn-lg btn-primary btn-m mb-2" type="button">
-          Submit ✅
-        </button>
-      </div>
     </div>
 
 

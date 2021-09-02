@@ -36,10 +36,6 @@
 
       /* Text Area Select Shit */
       textarea {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
         box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
       }
 
@@ -89,4 +85,43 @@
         100%{
           background-position: 0% 50%;
         }
+      }
+
+      .custom-textarea,
+      .textarea-hidden {
+          min-height: 15em !important;
+          cursor: text;
+      }
+      .textarea-hidden {
+          width: 100%;
+      }
+
+      /* Blinking cursor: https://codepen.io/ArtemGordinsky/pen/GnLBq */
+      .cursor {
+          animation: 1s blink step-end infinite;
+          font-size: 1.4em;
+      }
+
+      @keyframes blink {
+          from,
+          to {
+              color: transparent;
+          }
+          50% {
+              color: black;
+          }
+      }
+
+      .custom-textarea-container {
+          display: grid;
+      }
+      .custom-textarea {
+          z-index: 1;
+          grid-row: 1 / 2;
+          grid-column: 1 / 2;
+      }
+      .textarea-hidden {
+          z-index: 0;
+          grid-row: 1 / 2;
+          grid-column: 1 / 2;
       }
