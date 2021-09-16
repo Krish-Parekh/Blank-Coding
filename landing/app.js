@@ -51,3 +51,39 @@ document.body.onkeydown = function (event) {
         event.preventDefault();
     }
 };
+
+document.onkeydown = function(e) {
+    if(e.code == 123) {
+        return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.code == 'I'.charCodeAt(0)){
+        return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.code == 'J'.charCodeAt(0)){
+        return false;
+    }
+    if(e.ctrlKey && e.code == 'U'.charCodeAt(0)){
+        return false;
+    }
+}
+document.addEventListener('contextmenu',event => event.preventDefault());
+
+window.onload = function () {
+    var controls = document.getElementsByTagName("*");
+    var regEx = new RegExp("(^| )disable( |$)");
+    for (var i = 0; i < controls.length; i++) {
+        if (regEx.test(controls[i].className)) {
+            AttachEvent(controls[i], "copy");
+            AttachEvent(controls[i], "paste");
+            AttachEvent(controls[i], "cut");
+        }
+    }
+};
+function AttachEvent(control, eventName) {
+    if (control.addEventListener) {
+      control.addEventListener(eventName, function (e) { e.preventDefault(); }, false);
+    } else if (control.attachEvent) {
+      control.attachEvent('on' + eventName, function () { return false; });
+    }
+}
+      

@@ -10,51 +10,55 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src=”jquery.min.js”></script>
+
     <title>Bootstrap 5</title>
   </head>
   <body>
-
-  
-
     <!-- Main Body -->
     <div class="container-lg my-5 pt-1 cont justify-content-center">
-      <h2 class="text-center my-5 headi"><span class="sp">Blank</span> Coding 👩‍💻</h2>
+      <h2 class="text-center my-5 headi">
+        <span class="sp">Blank</span> Coding 👩‍💻
+      </h2>
       <p class="h5 mx-5">
         Event Instruction:
-        <br>
-        <br>
+        <br />
+        <br />
         1️⃣ Hello world
-        <br>
+        <br />
         2️⃣ Hello world
-        <br>
+        <br />
         3️⃣ Hello world
       </p>
       <!-- FORM -->
       <form class="m-5" id="form">
         <label for="custom-textarea" class="h4">Code here 👇</label>
         <div class="custom-textarea-container">
-            <div class="custom-textarea form-control" tabindex="1" id="custom-textarea">
-                <span class="cursor d-none" id="cursor">|</span>
-            </div>
-            <textarea
-                class="textarea-hidden form-control"
-                id="textarea-hidden"
-                spellcheck="false"
-            ></textarea>
+          <div
+            class="custom-textarea form-control"
+            tabindex="1"
+            id="custom-textarea"
+          >
+            <span class="cursor d-none" id="cursor">|</span>
+          </div>
+          <textarea
+            class="textarea-hidden form-control disable"
+            id="textarea-hidden"
+            spellcheck="false"
+          ></textarea>
         </div>
         <br />
         <!-- BUTTON -->
         <div class="text-center">
-            <button class="btn btn-lg btn-primary btn-m mb-2" type="submit">
-                Submit ✅
-            </button>
+          <button class="btn btn-lg btn-primary btn-m mb-2" type="submit">
+            Submit ✅
+          </button>
         </div>
       </form>
     </div>
-
 
     <!-- GSAP TEXT -->
     <div class="intro">
@@ -73,5 +77,6 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"
   ></script> -->
-  <script src="app.js"></script>  
+  
+  <script src="app.js"></script>
 </html>

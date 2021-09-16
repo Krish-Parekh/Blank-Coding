@@ -10,9 +10,11 @@ body {
     rgba(10, 188, 249, 1) 0%,
     rgba(44, 105, 209, 1) 74%
   );
-  
+  background-size: 400% 400%;
+  animation: gradient 20s ease-in infinite;
   font-family: "Poppins", sans-serif;
 }
+
 .loginContainer {
   display: flex;
   flex-direction: column;
@@ -40,4 +42,16 @@ submit_form {
 }
 .btn-m:hover {
   background-color: #16c60c;
+}
+/* BACKGROUND ANIMATION */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
