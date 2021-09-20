@@ -47,6 +47,11 @@ textarea {
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
+.question-container{
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5em;
+}
+
 /* GSAP ANIMATION */
 .intro {
   background-color: #000000;
