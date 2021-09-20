@@ -53,15 +53,19 @@ document.body.onkeydown = function (event) {
 };
 
 document.onkeydown = function(e) {
+    // F12 key
     if(e.code == 123) {
         return false;
     }
+    // I key
     if(e.ctrlKey && e.shiftKey && e.code == 'I'.charCodeAt(0)){
         return false;
     }
+    // J key 
     if(e.ctrlKey && e.shiftKey && e.code == 'J'.charCodeAt(0)){
         return false;
     }
+    // disable U
     if(e.ctrlKey && e.code == 'U'.charCodeAt(0)){
         return false;
     }
