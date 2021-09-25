@@ -7,12 +7,15 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-
+  flex-direction: column;
   background: rgb(10, 188, 249);
   background: linear-gradient(
     315deg,
