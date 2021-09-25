@@ -25,6 +25,7 @@ const form = document.getElementById("form");
 const customTextarea = document.getElementById("custom-textarea");
 const textareaHidden = document.getElementById("textarea-hidden");
 const cursor = document.getElementById("cursor");
+const timer = document.getElementById("timer");
 
 form.onsubmit = function (event) {
     event.preventDefault();
@@ -40,7 +41,53 @@ customTextarea.onfocus = function () {
     );
 
     cursor.classList.remove("d-none");
+    
+    startTimer();
 };
+
+let timerOnceStarted = false;
+function startTimer() {
+    if(!timerOnceStarted){
+        timerOnceStarted = true;
+        
+        const intervalID = setInterval(changeTime, 1000);
+        
+        const timeMinutes = 20 // set this to required minutes
+        const timerLimit = timeMinutes * 60;
+        let secondsElapsed = 0;
+        function changeTime() {
+            secondsElapsed++;
+            timer.innerText = fancyTimeFormat(timerLimit - secondsElapsed + 1);
+            
+            if(secondsElapsed > timerLimit) // timer ends
+            {
+                clearInterval(intervalID);
+                
+                // Write below the stuff to be done after timer ends (eg. auto submit, etc)
+            }
+        }
+    }
+}
+
+function fancyTimeFormat(duration) {   
+    /* https://stackoverflow.com/questions/3733227/javascript-seconds-to-minutes-and-seconds/11486026#11486026 */
+    // Hours, minutes and seconds
+    var hrs = ~~(duration / 3600);
+    var mins = ~~((duration % 3600) / 60);
+    var secs = ~~duration % 60;
+
+    // Output like "1:01" or "4:03:59" or "123:03:59"
+    let ret = "";
+
+    if (hrs > 0) {
+        ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+    }
+
+    ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+    ret += "" + secs;
+    return ret;
+}
+
 
 textareaHidden.onblur = function () {
     cursor.classList.add("d-none");
