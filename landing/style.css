@@ -148,3 +148,15 @@ textarea {
     margin-top: 1em;
   }
 }
+
+.timer-container{
+    font-size: 2em;
+    position: fixed;
+    top: 1em;
+    right: 0;
+    padding: 0.3em;
+    box-shadow: 1px 3px 20px 6px #607d8b;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
